@@ -1,3 +1,3 @@
 # Functions
-slice():
+slice():<br>
 splice():
