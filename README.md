@@ -4,5 +4,4 @@
   <li>slice():</li>
   <li>splice():</li>
 </ul>
-
-<b> Hello </b>
+<b> Array searching and looping</b>

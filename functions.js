@@ -62,3 +62,7 @@ countries.splice(0,2,'foo','faa');
 console.log('After inserting using splice() : '+countries);
 
 // Array Searcing and Looping
+// to get the control over looping
+
+// indexOf : Returns the index of the first occurrence of a value in an array.
+console.log('The index of UK is : '+countries.indexOf('UK'));
