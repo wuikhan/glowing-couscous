@@ -1,3 +1,8 @@
 # Functions
-<ul>slice():</ul><br>
-splice():
+<ul>
+  <li>slice():</li>
+  <li>splice():</li>
+  <li>Milk</li>
+</ul>
+
+
