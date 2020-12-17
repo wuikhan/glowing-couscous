@@ -60,3 +60,5 @@ console.log('After deleting using splice() : '+countries);
 console.log('Before using splice() for insertion : '+countries);
 countries.splice(0,2,'foo','faa');
 console.log('After inserting using splice() : '+countries);
+
+// Array Searcing and Looping
