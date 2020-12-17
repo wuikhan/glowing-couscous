@@ -1,8 +1,8 @@
 # Functions
 <ul>
+<li>Arrays</li>
   <li>slice():</li>
   <li>splice():</li>
-  <li>Milk</li>
 </ul>
 
-
+<b> Hello </b>
