@@ -26,4 +26,11 @@ console.log(countries[2]); // India
 console.log(countries[3]); // UK
 console.log(countries[4]); // undefined
 
+// Manipulating Arrays
+// push() will add the items to the end of the array
+countries.push('Canada');
+console.log('After using push() : '+countries); // USA, Pakistan, India, UK, Canada
 
+// pop() will takes off the last element from the array
+countries.pop();
+console.log('After using pop() : ' +countries); // USA, Pakistan, India, UK
