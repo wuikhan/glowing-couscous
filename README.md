@@ -1,1 +1,4 @@
 # glowing-couscous
+
+## Functions
+### slice():
