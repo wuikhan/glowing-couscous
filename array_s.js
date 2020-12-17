@@ -14,4 +14,4 @@ let values2 = Array.of(1, 2, 3);
 const values3 = ['a', 'b', 'c'];
 console.log(values3);
 console.log('type of : '+typeof values3);
-console.log('is this array ? ' +Array.isArray(values3));
+console.log('is this array ? ' +Array.isArray(values3)); 
