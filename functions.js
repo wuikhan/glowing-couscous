@@ -90,3 +90,59 @@ countries.forEach(function (item) {
 
 // Arrays in the DOM
 
+const containers = document.getElementsByClassName('container');
+containers[3].classList.add('d-none');
+console.log(containers.length);
+console.log(containers);
+
+// Scope and Hoisting
+// Global Scope
+const app = {
+    productId:12345,
+    username: 'John',
+    sex: 'male'
+}
+
+function showProduct() {
+    console.log(app.productId);
+}
+
+showProduct();
+
+// function scope is limited to the functions, variables cannot be accessed outside the function
+function showUsername() {
+    let username = 'Waqas'
+}
+//console.log(username); //Uncaught ReferenceError: username is not defined
+
+
+function showProductId() {
+    let productId = 12345;
+    function fix() {
+        let productId = 45678;
+        console.log('in fix : ', productId);
+    }
+    fix();
+    console.log('in showProductId : ',productId);
+}
+
+showProductId();
+
+// var and hoisting
+// hoisiting mean 
+showHelp();
+
+function showHelp() {
+    console.log('hoisting example');
+}
+
+x = 5;
+console.log(x);
+var x;
+
+/*
+y = 50;
+console.log(y); // Uncaught ReferenceError: Cannot access 'y' before initialization
+let y;
+*/
+
