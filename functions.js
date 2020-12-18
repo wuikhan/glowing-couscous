@@ -66,3 +66,27 @@ console.log('After inserting using splice() : '+countries);
 
 // indexOf : Returns the index of the first occurrence of a value in an array.
 console.log('The index of UK is : '+countries.indexOf('UK'));
+
+// filter() 
+const alphabets = ['a','b','c'];
+const set = alphabets.filter(function(item){
+    console.log('item : ' +item);
+    return item > 'b';
+});
+console.log(set);
+
+// find()
+const findFunc = ['aa','bbb', 'cccc'];
+const found = findFunc.find(function (item) {
+    console.log('item : ' +item);
+    return item.length > 2;
+});
+console.log(found);
+
+// forEach()
+countries.forEach(function (item) {
+    console.log(item); // foo faa UK
+})
+
+// Arrays in the DOM
+
