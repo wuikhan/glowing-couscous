@@ -153,10 +153,48 @@ function simpleSwitch() {
             console.log("ssn 1");
             break;
         case 2:
-            console.log("ssn 2");
+        case 3:
+        case 4:
+            console.log("ssn is in between 2 and 4");
             break;
         default:
-            console.log("different ssn");
+            console.log("unknown ssn");
             break;
     }
 }
+
+function multipleSwitch() {
+    let color = "red";
+    switch (color) {
+        case "red":
+        case "Pink":
+            console.log("color is red");
+            document.getElementById("multipleSwitch").innerHTML = "red";
+            break;
+        case "Blue":
+        case "Light Blue":
+        case "Dark Blue":
+            console.log("color is blue");
+            document.getElementById("multipleSwitch").innerHTML = "blue";
+            break;
+        default:
+            console.log("unknown color");
+            document.getElementById("multipleSwitch").innerHTML = "unknown";
+    }
+}
+// switch does a strict comparison
+// type and value must match 
+
+
+// maps() 
+let contacts = new Map()
+contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
+contacts.has('Jessie') // true
+contacts.get('Hilary') // undefined
+contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"})
+contacts.get('Jessie') // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.delete('Raymond') // false
+contacts.delete('Jessie') // true
+console.log(contacts.size) // 1
+
+console.log(contacts);
