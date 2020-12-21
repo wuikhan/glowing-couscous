@@ -5,6 +5,9 @@
 // array searching and looping
 // arrays in the DOM
 
+
+'use strict';
+
 // Create an Initialize an array
 let values = [1, 2, 3];
 
@@ -198,3 +201,60 @@ contacts.delete('Jessie') // true
 console.log(contacts.size) // 1
 
 console.log(contacts);
+
+// Module : Using Math and Comparison Operators
+/**
+ * - Math
+ * - Assignment
+ * - Comparison
+ * Plus sign with strings and numbers
+ * 'use strict' functionality
+ **/
+
+// Math Operators
+function mathSample(){
+    let price = 200;
+    let result = 0;
+    console.log("price = "+price.toString());
+// addition
+result = price + 100;
+console.log("price + 100 = "+result.toString());
+
+// subtraction
+result = price - 10;
+console.log("price - 10 = "+result.toString());
+
+// multiplication
+result = price * 2;
+console.log("price * 2 = "+result.toString());
+
+// division
+result = price / 2;
+console.log("price / 2 = "+result.toString());
+
+// exponential
+result = price ** 2;
+console.log("price ** 2 = "+result.toString());
+
+// modulus
+result = price % 3;
+console.log("price % 3 = "+result.toString());
+
+// Increment
+result = price++;
+console.log(" result = price++ ="+result.toString());
+console.log("price = "+price.toString());
+
+result = ++price;
+console.log(" result = ++price = "+result.toString());
+
+// decrement
+result = price--;
+console.log(" result = price-- ="+result.toString());
+console.log("price = "+price.toString());
+
+result = --price;
+console.log(" result = --price = "+result.toString());
+
+
+}
