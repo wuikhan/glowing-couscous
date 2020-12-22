@@ -255,6 +255,44 @@ console.log("price = "+price.toString());
 
 result = --price;
 console.log(" result = --price = "+result.toString());
+}
+// Assignment Operators
+function assignmentSample(){
+    let price = 200;
+    console.log("price = "+price.toString());
+
+    // Addition
+    price += 100;
+    console.log("price += 100 " +price.toString());
+
+    // Subtraction
+    price -= 100;
+    console.log("price -= 100 " +price.toString());
+
+    // Multiplication
+    price *= 2;
+    console.log("price *= 2 " +price.toString());
+
+    // division
+    price /= 2;
+    console.log("price /= 2 " +price.toString());
+
+    // exponentiation
+    price **= 2;
+    console.log("price **= 2 " +price.toString());
+
+    // modulus
+    price %= 2;
+    console.log("price %= 2 " +price.toString());
+
+    /**
+     * Truthy and Falsy values
+     * logical operators And, Or and Not
+     * Short ciruiting
+     * Definition : any variable with value ("Hey", 10 etc) or a boolean true is true.
+     * Any variable = false, null, undefined, NaN, "" is false
+     */ 
+
 
 
 }
