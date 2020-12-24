@@ -162,7 +162,7 @@ function simpleSwitch() {
             console.log("different ssn");
             break;
     }
-<<<<<<< HEAD
+
 }
 
 function multipleSwitch() {
@@ -283,7 +283,7 @@ function assignmentSample(){
     // modulus
     price %= 2;
     console.log("price %= 2 " +price.toString());
-
+}
     /**
      * Truthy and Falsy values
      * logical operators And, Or and Not
@@ -291,4 +291,29 @@ function assignmentSample(){
      * Definition : any variable with value ("Hey", 10 etc) or a boolean true is true.
      * Any variable = false, null, undefined, NaN, "" is false
      */ 
-}
+
+     function trueFalseSample(){
+         let price = 20;
+         let color = "Red";
+         let result ;
+         console.log("Check for 'true' values");
+         // evaluate the expression
+         result = price > 10;
+         console.log(result);
+
+         // Test the expression
+         if(price>10){
+             console.log("Price is > 10");
+         }
+
+         // check if price has something other than zero
+         if(price){
+             console.log("Price is > 0");
+         }
+
+         // Check if color has characters in it
+         if(color){
+             console.log("Color has a value");
+         }
+         
+     }
