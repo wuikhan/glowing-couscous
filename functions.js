@@ -315,5 +315,18 @@ function assignmentSample(){
          if(color){
              console.log("Color has a value");
          }
-         
+
+         console.log("");
+         console.log("Check for 'false' values");
+
+         // set value to null, it becomes false 
+         color = null;
+         console.log("color == null = "+Boolean(color));
+
+         // set value to empty string, it becomes false
+         color = "";
+         console.log("color == '' = " +Boolean(color));
+
+         // Set value to undefined, it becomes false
+
      }
