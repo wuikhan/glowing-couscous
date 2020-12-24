@@ -156,14 +156,13 @@ function simpleSwitch() {
             console.log("ssn 1");
             break;
         case 2:
-        case 3:
-        case 4:
-            console.log("ssn is in between 2 and 4");
+            console.log("ssn 2");
             break;
         default:
-            console.log("unknown ssn");
+            console.log("different ssn");
             break;
     }
+<<<<<<< HEAD
 }
 
 function multipleSwitch() {
@@ -292,7 +291,4 @@ function assignmentSample(){
      * Definition : any variable with value ("Hey", 10 etc) or a boolean true is true.
      * Any variable = false, null, undefined, NaN, "" is false
      */ 
-
-
-
 }
