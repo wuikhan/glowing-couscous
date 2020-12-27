@@ -328,5 +328,30 @@ function assignmentSample(){
          console.log("color == '' = " +Boolean(color));
 
          // Set value to undefined, it becomes false
+         color = undefined;
+         console.log("color == undefined = "+Boolean(color));
 
+         // declare variable and don't initialize it is False
+         let value;
+         console.log("'let value' = "+Boolean(value));
+
+         // Result of NaN is false
+         value = 100 / "test";
+         console.log("100 / 'test' = "+Boolean(value));
+
+     }
+
+     function logicalSample() {
+         let price = 200;
+         // AND (&&) Operators
+         if(price > 10 && price < 1600){
+             console.log("price > 10 && price < 1600 is true");
+         }
+
+         // AND (&&) Operators
+         if(price > 10 && price < 200){
+            console.log("price > 10 && price < 200 is true");
+        } else {
+            console.log("price > 10 && price < 200 is 'false'");
+        }
      }
