@@ -371,4 +371,18 @@ function assignmentSample(){
      }
 
      // Short ciruiting
-     
+     function shortCircuitAndSample(){
+         let result;
+         // if first result is false, the second part is never evaludated
+         result = isColorRed("Black") && isGreaterThan1400(1400);
+     }
+
+     function isColorRed(value){
+        console.log("In the isColorRed() function");
+        return value == "Red";
+     }
+
+     function isGreaterThan1400(value){
+         console.log("In the isGreaterThan1400() function");
+         return value > 1400;
+     }
