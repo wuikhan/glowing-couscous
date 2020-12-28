@@ -354,4 +354,21 @@ function assignmentSample(){
         } else {
             console.log("price > 10 && price < 200 is 'false'");
         }
+
+        // OR (||) Operator
+        if(price > 10 || price < 1600){
+            console.log("price > 10 || price < 1600 is 'true'");
+        }
+          // OR (||) Operator
+          if(price > 10 || price > 1600){
+            console.log("price > 10 || price > 1600 is 'true'");
+        }
+
+        // NOT (!) Operator
+        if(!(price < 10)) {
+            console.log("!(price < 10) is 'true'");
+        }
      }
+
+     // Short ciruiting
+     
