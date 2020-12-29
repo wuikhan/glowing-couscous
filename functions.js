@@ -604,7 +604,7 @@ function typeofSample() {
     console.log("isActive = " + typeof isActive);
     console.log("result = " + typeof result);
     console.log("value = " + typeof value);
-    console.log("typeofSample() = "+typeof typeofSample);
+    console.log("typeofSample() = " + typeof typeofSample);
 }
 
 /**
@@ -614,25 +614,46 @@ function typeofSample() {
  * returns a reference to the object itself
  */
 
- function constructorSample(){
-     let product = _products[0];
-     let introDate = new Date();
-     let strValue = new String();
-     let isActive = false;
-     console.log("_products = "+_products.constructor.toString);
-     console.log("product = " +product.constructor.toString);
-     console.log("product.productID = " +product.productID.constructor.toString);
-     console.log("product.productNumber = " +  product.productNumber.constructor.toString);
-     console.log("introDate = " +  introDate.constructor.toString);
-     console.log("strValue = " + strValue.constructor.toString);
-     console.log("isActive = " +  isActive.constructor.toString);
-     console.log("typeofSample() = "+ constructorSample.constructor.toString);
- }
+function constructorSample() {
+    let product = _products[0];
+    let introDate = new Date();
+    let strValue = new String();
+    let isActive = false;
+    console.log("_products = " + _products.constructor.toString);
+    console.log("product = " + product.constructor.toString);
+    console.log("product.productID = " + product.productID.constructor.toString);
+    console.log("product.productNumber = " + product.productNumber.constructor.toString);
+    console.log("introDate = " + introDate.constructor.toString);
+    console.log("strValue = " + strValue.constructor.toString);
+    console.log("isActive = " + isActive.constructor.toString);
+    console.log("typeofSample() = " + constructorSample.constructor.toString);
+}
 
- // helper function
- function helperFunctionSample(){
-     let introDate = new Date();
-     let result;
-     let value = null;
-     
- }
+// Using helper functions
+function helperFunctionsSample() {
+    let introDate = new Date();
+    let result;
+    let value = null;
+
+    // Use helper functions that return true/false
+    console.log("_products is Array? = " + isArray(_products));
+    console.log("introDate is Date? = " + isDate(introDate));
+
+    // Be sure to check if something is null prior to using
+    console.log("result = " + isNullOrUndefined(result) ? 'null/undefined' : result);
+    console.log("value = " + isNullOrUndefined(value) ? 'null/undefined' : value);
+}
+
+function isArray(value) {
+    return value.constructor.toString().indexOf("Array") > -1;
+    // or use: return value.constructor === Array;
+}
+
+function isDate(value) {
+    return value.constructor.toString().indexOf("Date") > -1;
+    // or use: return value.constructor === Date;
+}
+
+function isNullOrUndefined(value) {
+    return value === null || value === undefined;
+}
