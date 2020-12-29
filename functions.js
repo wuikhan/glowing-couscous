@@ -121,6 +121,7 @@ function showUsername() {
 
 function showProductId() {
     let productId = 12345;
+
     function fix() {
         let productId = 45678;
         console.log('in fix : ', productId);
@@ -190,10 +191,16 @@ function multipleSwitch() {
 
 // maps() 
 let contacts = new Map()
-contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
+contacts.set('Jessie', {
+    phone: "213-555-1234",
+    address: "123 N 1st Ave"
+})
 contacts.has('Jessie') // true
 contacts.get('Hilary') // undefined
-contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"})
+contacts.set('Hilary', {
+    phone: "617-555-4321",
+    address: "321 S 2nd St"
+})
 contacts.get('Jessie') // {phone: "213-555-1234", address: "123 N 1st Ave"}
 contacts.delete('Raymond') // false
 contacts.delete('Jessie') // true
@@ -211,215 +218,316 @@ console.log(contacts);
  **/
 
 // Math Operators
-function mathSample(){
+function mathSample() {
     let price = 200;
     let result = 0;
-    console.log("price = "+price.toString());
-// addition
-result = price + 100;
-console.log("price + 100 = "+result.toString());
+    console.log("price = " + price.toString());
+    // addition
+    result = price + 100;
+    console.log("price + 100 = " + result.toString());
 
-// subtraction
-result = price - 10;
-console.log("price - 10 = "+result.toString());
+    // subtraction
+    result = price - 10;
+    console.log("price - 10 = " + result.toString());
 
-// multiplication
-result = price * 2;
-console.log("price * 2 = "+result.toString());
+    // multiplication
+    result = price * 2;
+    console.log("price * 2 = " + result.toString());
 
-// division
-result = price / 2;
-console.log("price / 2 = "+result.toString());
+    // division
+    result = price / 2;
+    console.log("price / 2 = " + result.toString());
 
-// exponential
-result = price ** 2;
-console.log("price ** 2 = "+result.toString());
+    // exponential
+    result = price ** 2;
+    console.log("price ** 2 = " + result.toString());
 
-// modulus
-result = price % 3;
-console.log("price % 3 = "+result.toString());
+    // modulus
+    result = price % 3;
+    console.log("price % 3 = " + result.toString());
 
-// Increment
-result = price++;
-console.log(" result = price++ ="+result.toString());
-console.log("price = "+price.toString());
+    // Increment
+    result = price++;
+    console.log(" result = price++ =" + result.toString());
+    console.log("price = " + price.toString());
 
-result = ++price;
-console.log(" result = ++price = "+result.toString());
+    result = ++price;
+    console.log(" result = ++price = " + result.toString());
 
-// decrement
-result = price--;
-console.log(" result = price-- ="+result.toString());
-console.log("price = "+price.toString());
+    // decrement
+    result = price--;
+    console.log(" result = price-- =" + result.toString());
+    console.log("price = " + price.toString());
 
-result = --price;
-console.log(" result = --price = "+result.toString());
+    result = --price;
+    console.log(" result = --price = " + result.toString());
 }
 // Assignment Operators
-function assignmentSample(){
+function assignmentSample() {
     let price = 200;
-    console.log("price = "+price.toString());
+    console.log("price = " + price.toString());
 
     // Addition
     price += 100;
-    console.log("price += 100 " +price.toString());
+    console.log("price += 100 " + price.toString());
 
     // Subtraction
     price -= 100;
-    console.log("price -= 100 " +price.toString());
+    console.log("price -= 100 " + price.toString());
 
     // Multiplication
     price *= 2;
-    console.log("price *= 2 " +price.toString());
+    console.log("price *= 2 " + price.toString());
 
     // division
     price /= 2;
-    console.log("price /= 2 " +price.toString());
+    console.log("price /= 2 " + price.toString());
 
     // exponentiation
     price **= 2;
-    console.log("price **= 2 " +price.toString());
+    console.log("price **= 2 " + price.toString());
 
     // modulus
     price %= 2;
-    console.log("price %= 2 " +price.toString());
+    console.log("price %= 2 " + price.toString());
 }
-    /**
-     * Truthy and Falsy values
-     * logical operators And, Or and Not
-     * Short ciruiting
-     * Definition : any variable with value ("Hey", 10 etc) or a boolean true is true.
-     * Any variable = false, null, undefined, NaN, "" is false
-     */ 
+/**
+ * Truthy and Falsy values
+ * logical operators And, Or and Not
+ * Short ciruiting
+ * Definition : any variable with value ("Hey", 10 etc) or a boolean true is true.
+ * Any variable = false, null, undefined, NaN, "" is false
+ */
 
-     function trueFalseSample(){
-         let price = 20;
-         let color = "Red";
-         let result ;
-         console.log("Check for 'true' values");
-         // evaluate the expression
-         result = price > 10;
-         console.log(result);
+function trueFalseSample() {
+    let price = 20;
+    let color = "Red";
+    let result;
+    console.log("Check for 'true' values");
+    // evaluate the expression
+    result = price > 10;
+    console.log(result);
 
-         // Test the expression
-         if(price>10){
-             console.log("Price is > 10");
-         }
-
-         // check if price has something other than zero
-         if(price){
-             console.log("Price is > 0");
-         }
-
-         // Check if color has characters in it
-         if(color){
-             console.log("Color has a value");
-         }
-
-         console.log("");
-         console.log("Check for 'false' values");
-
-         // set value to null, it becomes false 
-         color = null;
-         console.log("color == null = "+Boolean(color));
-
-         // set value to empty string, it becomes false
-         color = "";
-         console.log("color == '' = " +Boolean(color));
-
-         // Set value to undefined, it becomes false
-         color = undefined;
-         console.log("color == undefined = "+Boolean(color));
-
-         // declare variable and don't initialize it is False
-         let value;
-         console.log("'let value' = "+Boolean(value));
-
-         // Result of NaN is false
-         value = 100 / "test";
-         console.log("100 / 'test' = "+Boolean(value));
-
-     }
-
-     function logicalSample() {
-         let price = 200;
-         // AND (&&) Operators
-         if(price > 10 && price < 1600){
-             console.log("price > 10 && price < 1600 is true");
-         }
-
-         // AND (&&) Operators
-         if(price > 10 && price < 200){
-            console.log("price > 10 && price < 200 is true");
-        } else {
-            console.log("price > 10 && price < 200 is 'false'");
-        }
-
-        // OR (||) Operator
-        if(price > 10 || price < 1600){
-            console.log("price > 10 || price < 1600 is 'true'");
-        }
-          // OR (||) Operator
-          if(price > 10 || price > 1600){
-            console.log("price > 10 || price > 1600 is 'true'");
-        }
-
-        // NOT (!) Operator
-        if(!(price < 10)) {
-            console.log("!(price < 10) is 'true'");
-        }
-     }
-
-     // Short ciruiting
-     function shortCircuitAndSample(){
-         let result;
-         // if first result is false, the second part is never evaludated
-         result = isColorRed("Black") && isGreaterThan1400(1400);
-     }
-
-     function isColorRed(value){
-        console.log("In the isColorRed() function");
-        return value == "Red";
-     }
-
-     function isGreaterThan1400(value){
-         console.log("In the isGreaterThan1400() function");
-         return value > 1400;
-     }
-
-     function shortCircuitOrSample(){
-         let result;
-         console.log("");
-         console.log("Calling isColorRed() first");
-
-         // each expression is evaluated until one returns a true
-         result = isColorRed("Red") || isGreaterThan1400(200);
-
-         // Each expression is evaludated until one returns a true the rest are skipped
-         console.log("");
-         console.log("Calling isGreaterThan1400() first");
-         result = isGreaterThan1400(200) || isColorRed("Black");
-     }
-
-     // Utilizing Javascript exception handling
-     function simpleTryCatch(){
-         let result;
-         try {
-             result = x1 / 10;
-         } catch(error){
-             console.log(error.message);
-         }
-     }
-
-     function finallyTryCatch(){
-        let result;
-        try {
-            console.log("An error will occur.")
-            result = x1 / 10;
-            console.log("This line will never run.")
-        } catch(error){
-            console.log("In the catch block"+error.message);
-        } finally {
-            console.log("In the 'finally' block.")
-        }
+    // Test the expression
+    if (price > 10) {
+        console.log("Price is > 10");
     }
+
+    // check if price has something other than zero
+    if (price) {
+        console.log("Price is > 0");
+    }
+
+    // Check if color has characters in it
+    if (color) {
+        console.log("Color has a value");
+    }
+
+    console.log("");
+    console.log("Check for 'false' values");
+
+    // set value to null, it becomes false 
+    color = null;
+    console.log("color == null = " + Boolean(color));
+
+    // set value to empty string, it becomes false
+    color = "";
+    console.log("color == '' = " + Boolean(color));
+
+    // Set value to undefined, it becomes false
+    color = undefined;
+    console.log("color == undefined = " + Boolean(color));
+
+    // declare variable and don't initialize it is False
+    let value;
+    console.log("'let value' = " + Boolean(value));
+
+    // Result of NaN is false
+    value = 100 / "test";
+    console.log("100 / 'test' = " + Boolean(value));
+
+}
+
+function logicalSample() {
+    let price = 200;
+    // AND (&&) Operators
+    if (price > 10 && price < 1600) {
+        console.log("price > 10 && price < 1600 is true");
+    }
+
+    // AND (&&) Operators
+    if (price > 10 && price < 200) {
+        console.log("price > 10 && price < 200 is true");
+    } else {
+        console.log("price > 10 && price < 200 is 'false'");
+    }
+
+    // OR (||) Operator
+    if (price > 10 || price < 1600) {
+        console.log("price > 10 || price < 1600 is 'true'");
+    }
+    // OR (||) Operator
+    if (price > 10 || price > 1600) {
+        console.log("price > 10 || price > 1600 is 'true'");
+    }
+
+    // NOT (!) Operator
+    if (!(price < 10)) {
+        console.log("!(price < 10) is 'true'");
+    }
+}
+
+// Short ciruiting
+function shortCircuitAndSample() {
+    let result;
+    // if first result is false, the second part is never evaludated
+    result = isColorRed("Black") && isGreaterThan1400(1400);
+}
+
+function isColorRed(value) {
+    console.log("In the isColorRed() function");
+    return value == "Red";
+}
+
+function isGreaterThan1400(value) {
+    console.log("In the isGreaterThan1400() function");
+    return value > 1400;
+}
+
+function shortCircuitOrSample() {
+    let result;
+    console.log("");
+    console.log("Calling isColorRed() first");
+
+    // each expression is evaluated until one returns a true
+    result = isColorRed("Red") || isGreaterThan1400(200);
+
+    // Each expression is evaludated until one returns a true the rest are skipped
+    console.log("");
+    console.log("Calling isGreaterThan1400() first");
+    result = isGreaterThan1400(200) || isColorRed("Black");
+}
+
+// Utilizing Javascript exception handling
+function simpleTryCatch() {
+    let result;
+    try {
+        result = x1 / 10;
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+function finallyTryCatch() {
+    let result;
+    try {
+        console.log("An error will occur.")
+        result = x1 / 10;
+        console.log("This line will never run.")
+    } catch (error) {
+        console.log("In the catch block" + error.message);
+    } finally {
+        console.log("In the 'finally' block.")
+    }
+}
+
+// Throw a custom error object
+function throwError() {
+    try {
+        attemptDivision();
+    } catch (error) {
+        console.log(error.message + " - Error type : " + error.name);
+    }
+}
+
+function attemptDivision() {
+    let result;
+    try {
+        result = x1 / 10;
+    } catch (error) {
+        // Always include at least a 'message' and 'name' properties
+        throw {
+            "message": "In the attemptDivision() method the following error occurred : " + error.message,
+            "name": "CustomError"
+        };
+    }
+}
+
+// Types of Errors
+/**
+ * ReferenceRrror, RangeError, TypeError,URIError,SyntaxError,EvalError
+ */
+function referenceError() {
+    let result;
+    try {
+        // Reference Error because 'x' is not defined
+        result = x1 / 10;
+    } catch (error) {
+        handleError(error)
+    }
+}
+
+function rangeErrorSample() {
+    let result = 0;
+    try {
+        // Range error becquse a number cannot have 200 significant digits
+        result.toPrecision(200);
+    } catch (error) {
+        handleError(error);
+    }
+}
+
+function typeErrorSample() {
+    let result = 0;
+    try {
+        // Type error because result is numeric
+        result.toUpperCase();
+    } catch (error) {
+        handleError(error);
+    }
+}
+
+function uriSample() {
+    let uri = "http://www.netinc.com/path%%%/file name";
+    try {
+        // URI error
+        decodeURI(uri);
+    } catch (error) {
+        handleError(error);
+    }
+}
+
+function syntaxErrorSample() {
+    try {
+        // Syntax error because missing a final single quote
+        let sum = eval("Alert('Hello)");
+    } catch (error) {
+        handleError(error);
+    }
+}
+
+function handleError(error) {
+    switch (error.name) {
+        case 'ReferenceError':
+            console.log("Reference error: " + error.message);
+            break;
+        case 'RangeError':
+            console.log("Range error: " + error.message);
+            break;
+        case 'TypeError':
+            console.log("Type error: " + error.message);
+            break;
+        case 'URIError':
+            console.log("URI error: " + error.message);
+            break;
+        case 'SyntaxError':
+            console.log("Syntax error: " + error.message);
+            break;
+        case 'EvalError':
+            console.log("Evaluation error: " + error.message);
+            break;
+        default:
+            console.log("Error Type: " + error.name + "- Message: " + error.message);
+            break;
+    }
+}
