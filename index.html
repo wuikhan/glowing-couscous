@@ -1,26 +1,29 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1 class="container">Hello, world!</h1>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <button type="button" class="btn btn-success" id="see-review" onclick-"simpleSwitch();">See Review</button>
+  <title>Hello, world!</title>
+</head>
 
-    <div id="review" class="container d-none">
-        <h4> Review Title </h4>
-        <p> Review text </p>
-    </div>
-    <div id="containerId" class="container">
-      <p> DOM Example </p>
+<body>
+  <h1 class="container">Hello, world!</h1>
+
+  <button type="button" class="btn btn-success" id="see-review" onclick-"simpleSwitch();">See Review</button>
+
+  <div id="review" class="container d-none">
+    <h4> Review Title </h4>
+    <p> Review text </p>
+  </div>
+  <div id="containerId" class="container">
+    <p> DOM Example </p>
   </div>
 
   <h1 class="container">Hello, DOM!</h1>
@@ -49,10 +52,35 @@
   <button onclick="constructorSample();">constructorSample Sample</button>
   <button onclick="helperFunctionsSample();">helper function Sample</button>
   <button onclick="instanceofSample();">instanceof operator</button>
+  <br></br>
+  <button onclick="functionScope();">Function scope</button>
+  <button onclick="this.style.background='Red'">
+    In event handler
+  </button>
+  <button onclick="eventHandler(this)">
+    Pass to function from event handler
+  </button>
+  <button onclick="objectLiteral();">Object literal</button>
+  <button onclick="callAndApply();">Use with call()/apply()</button>
+  <button onclick="constructorFunctions();">Constructor Functions</button>
+  <br></br>
+  <p>NOTE: IE and Edge do not support the Spread operator</p>
+  <button onclick="stringToArray();">Convert string to array</button>
+  <button onclick="filterDupes();">Filter duplicates from array</button>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="script.js"></script>
-    <script src="functions.js"></script>
-  </body>
+  <button onclick="copyArray();">Copy</button>
+  <button onclick="copyObjectArrays();">Copy Object Arrays</button>
+  <button onclick="concatenateArray();">Concatentation</button>
+
+  <button onclick="spreadInConstructors()">Using Spread in constructors</button>
+  <button onclick="spreadForFunctionArgs();">Using Spread for function arguments</button>
+
+  <button onclick="objectLiterals();">Object literals</button>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="script.js"></script>
+  <script src="functions.js"></script>
+</body>
+
 </html>
