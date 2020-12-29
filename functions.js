@@ -386,3 +386,40 @@ function assignmentSample(){
          console.log("In the isGreaterThan1400() function");
          return value > 1400;
      }
+
+     function shortCircuitOrSample(){
+         let result;
+         console.log("");
+         console.log("Calling isColorRed() first");
+
+         // each expression is evaluated until one returns a true
+         result = isColorRed("Red") || isGreaterThan1400(200);
+
+         // Each expression is evaludated until one returns a true the rest are skipped
+         console.log("");
+         console.log("Calling isGreaterThan1400() first");
+         result = isGreaterThan1400(200) || isColorRed("Black");
+     }
+
+     // Utilizing Javascript exception handling
+     function simpleTryCatch(){
+         let result;
+         try {
+             result = x1 / 10;
+         } catch(error){
+             console.log(error.message);
+         }
+     }
+
+     function finallyTryCatch(){
+        let result;
+        try {
+            console.log("An error will occur.")
+            result = x1 / 10;
+            console.log("This line will never run.")
+        } catch(error){
+            console.log("In the catch block"+error.message);
+        } finally {
+            console.log("In the 'finally' block.")
+        }
+    }
