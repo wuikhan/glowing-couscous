@@ -628,3 +628,11 @@ function typeofSample() {
      console.log("isActive = " +  isActive.constructor.toString);
      console.log("typeofSample() = "+ constructorSample.constructor.toString);
  }
+
+ // helper function
+ function helperFunctionSample(){
+     let introDate = new Date();
+     let result;
+     let value = null;
+     
+ }
