@@ -531,3 +531,100 @@ function handleError(error) {
             break;
     }
 }
+
+/**
+ * Different data types
+ * - Primitive
+ * - Objects
+ * How to determine data types
+ * - typeof operators
+ * - constructor property
+ * - instanceof operator
+ * 
+ * Primitive Data Types
+ * boolean = true or false
+ * null = no value
+ * undefined = a variable declared, but has no value
+ * number = integers, decimal, float etc
+ * string = a series (array) of characters
+ * 
+ * Object Data Types
+ * new Array = a collection of values
+ * new Error = contains a name an error Message
+ * new Function = a block of code
+ * new Object = A wrapper around any type
+ * new RegExp = A regular expression
+ * 
+ * new Boolean = an object that contains trye or false
+ * new Number = an object that contains a numeric values
+ * new String = an object that contains a characters
+ * NOTE: use the primitive 'boolean', 'number' or 'string' isntead of these when possible
+ * 
+ */
+let _products = [{
+        productID: 680,
+        name: "HL Road Frame - Black, 58",
+        productNumber: "FR-R92B-58",
+        color: "Black",
+        standardCost: 1059.31,
+        listPrice: 1431.50
+    },
+    {
+        productID: 707,
+        name: "Sport-100 Helmet, Red",
+        productNumber: "HL-R92B-58",
+        color: "Red",
+        standardCost: 19.31,
+        listPrice: 31.50
+    },
+    {
+        productID: 709,
+        name: "Mountain Bike Socks, Medium",
+        productNumber: "SO-B909-58",
+        color: "Green",
+        standardCost: 3.31,
+        listPrice: 5.50
+    }
+]
+
+function typeofSample() {
+    let product = _products[0];
+    let introDate = new Date();
+    let strValue = new String();
+    let isActive = false;
+    let result;
+    let value = null;
+
+    console.log("_products = " + typeof _products);
+    console.log("product = " + typeof product);
+    console.log("product.productID = " + typeof product.productID);
+    console.log("product.productNumber = " + typeof product.productNumber);
+    console.log("strValue = " + typeof strValue);
+    console.log("introDate = " + typeof introDate);
+    console.log("isActive = " + typeof isActive);
+    console.log("result = " + typeof result);
+    console.log("value = " + typeof value);
+    console.log("typeofSample() = "+typeof typeofSample);
+}
+
+/**
+ * Object Data Type / Constructor
+ * All object data types inherit from object (not primitive)
+ * object has constructor property
+ * returns a reference to the object itself
+ */
+
+ function constructorSample(){
+     let product = _products[0];
+     let introDate = new Date();
+     let strValue = new String();
+     let isActive = false;
+     console.log("_products = "+_products.constructor.toString);
+     console.log("product = " +product.constructor.toString);
+     console.log("product.productID = " +product.productID.constructor.toString);
+     console.log("product.productNumber = " +  product.productNumber.constructor.toString);
+     console.log("introDate = " +  introDate.constructor.toString);
+     console.log("strValue = " + strValue.constructor.toString);
+     console.log("isActive = " +  isActive.constructor.toString);
+     console.log("typeofSample() = "+ constructorSample.constructor.toString);
+ }
